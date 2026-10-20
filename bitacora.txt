@@ -1,0 +1,16 @@
+#Desde Network
+URL: http://127.0.0.1:5500/index.html
+Protocolo: http
+Host: 127.0.0.1
+Puerto: 5500
+Ruta: /index.html
+Método: GET
+Código de Estado: 200 OK
+
+#Agregando ruta que no existe: http://127.0.0.1:5500/promociones.html
+Código de Estado: 404 Not Found.  (No encontrado) significa que el servidor de internet logró comunicarse, pero no pudo encontrar el recurso o la página web que se solicitó.
+
+#Roles
+HTML: Estructura del sitio web. Ejemplo concreto: Crear una sección donde se muestren las bicicletas disponibles para alquilar.
+CSS: Diseño y apariencia visual. Diseñar la página de Rueda Libre con colores relacionados con la naturaleza y la movilidad sostenible
+JavaScript: Interactividad y funcionalidad. Ejemplo concreto: Cuando un usuario seleccione una bicicleta y elija la cantidad de horas que desea alquilarla, JavaScript calculará automáticamente el precio total del alquiler y lo mostrará en pantalla.
