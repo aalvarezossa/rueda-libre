@@ -26,3 +26,33 @@ paginas/tarifas.html  -->  Reservas  -->  reservas.html
 paginas/reservas.html  -->  Página principal  -->  ../index.html
 paginas/reservas.html  -->  Tarifas y rutas  -->  tarifas.html
 paginas/reservas.html  -->  Reservas  -->  reservas.html
+
+#Esquema de regiones:
+┌──────────────────────────────────────────────┐
+│                  ENCABEZADO                  │
+│              Rueda Libre y logo              │
+├──────────────────────────────────────────────┤
+│                  NAVEGACIÓN                  │
+│    Inicio |  Tarifas y rutas | Reservas      │
+├──────────────────────────────────────────────┤
+│                                              │
+│              CONTENIDO PRINCIPAL             │
+│                                              │
+│  ┌────────────────────────────────────────┐  │
+│  │               SECCIÓN 1                │  │
+│  │                                        │  │
+│  │  ┌──────────────────────────────────┐  │  │
+│  │  │             ARTÍCULO             │  │  │
+│  │  │       Título y contenido         │  │  │
+│  │  └──────────────────────────────────┘  │  │
+│  └────────────────────────────────────────┘  │
+│                                              │
+│  ┌────────────────────────────────────────┐  │
+│  │         CONTENIDO COMPLEMENTARIO       │  │
+│  │      Enlaces, información adicional    │  │
+│  └────────────────────────────────────────┘  │
+│                                              │
+├──────────────────────────────────────────────┤
+│                     PIE                      │
+│             Nombre, correo y año             │
+└──────────────────────────────────────────────┘
