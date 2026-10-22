@@ -6,7 +6,7 @@
     <title>Reservas</title>
     <link rel="icon" type="image/png" href="../img/logo.png">
 </head>
-<body>
+<br>
     
     <!--Encabezado-->
     <header>
@@ -24,7 +24,7 @@
         
     </header>
 
-    <main> 
+    <br> 
         <!-- Enlace de correo de contacto-->
         <a href="mailto:info@ruedalibre.com">
         Contáctanos
@@ -42,8 +42,83 @@
             <dt><strong>Sábados, domingos y festivos</strong></dt>
                 <dd>6:00 a.m. a 2:00 p.m.</dd>
         </dl>
+
+        <br></br>
+
         </section>
-    
+
+        <!--Formulario de reserva-->
+        <h2>Formulario de Reserva</h2>
+
+        <form action="formulario.php", method="post">
+
+            <h3>Tus datos</h3>
+
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" required style="width: 100%; max-width: 250px; resize: vertical;""><br><br>
+
+            <label for="documento">Número de documento:</label><br>
+            <input type="text" id="documento" name="documento" required pattern="\d{10}" title="El documento debe tener 10 números" inputmode="numeric" maxlength="10" style="width: 100%; max-width: 100px; resize: vertical;"><br><br>
+
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required style="width: 100%; max-width: 250px; resize: vertical;"><br><br>
+
+            <label for="celular">Celular:</label><br>
+            <input type="text" id="celular" name="celular" required pattern="\d{10}" title="El celular debe contener 10 números" inputmode="numeric" maxlength="10" style="width: 100%; max-width: 100px; resize: vertical;"><br><br>
+
+            <h3>Tu alquiler</h3>
+
+            <label for="fecha_alquiler">Fecha de alquiler:</label><br>
+            <input type="datetime-local" id="fecha_alquiler" name="fecha_alquiler" required><br><br>
+
+            <!--Lista desplegable para tipo de bicicleta-->
+            <label for="tipo_bici">Tipo de bicicleta:</label><br>
+            <select id="tipo_bici" name="tipo_bici" required>
+                <option value="" disabled selected>Elige una opción...</option>
+                <option value="urbana">Urbana</option>
+                <option value="montaña">Montaña</option>
+                <option value="electrica">Eléctrica</option>
+            </select><br><br>
+
+            <!--Lista desplegable para tipo de plan-->
+            <label for="tipo_plan">Tipo de plan:</label><br>
+            <select id="tipo_plan" name="tipo_plan" required>
+                <option value="" disabled selected>Elige una opción...</option>
+                <option value="1_hora">1 hora</option>
+                <option value="medio_dia">Medio día</option>
+                <option value="dia_completo">Día completo</option>
+            </select><br><br>
+
+            <label for="cantidad_bicicletas">Cantidad de bicicletas:</label><br>
+            <input type="text" id="cantidad_bicicletas" name="cantidad_bicicletas" required pattern="\d{2}" inputmode="numeric" maxlength="2" style="width: 100%; max-width: 40px; resize: vertical;"><br><br>
+
+            <!--Lista desplegable para recorrido guiado-->
+            <label for="recorrido_guiado">¿Recorrido guiado?:</label><br>
+            <select id="recorrido_guiado" name="recorrido_guiado" required>
+                <option value="" disabled selected>Elige una opción...</option>
+                <option value="no_recorrido">No, gracias</option>
+                <option value="rios_parques">Ríos y parques</option>
+                <option value="sabores_barrio">Sabores de barrio</option>
+                <option value="palmas">Reto Las Palmas</option>
+            </select><br><br>
+        
+            <label for="comentarios">Comentarios:</label><br>
+            <input type="text" id="comentarios" name="comentarios" placeholder="Escribe aquí tus comentarios" style="width: 100%; max-width: 400px; height: 100px; resize: vertical;"><br><br>
+
+            <h3>Confirmación</h3>
+            
+            <!--Casilla para aceptación de las políticas de alquiler-->
+            <input type="checkbox" id="aceptacion_politicas" name="aceptacion_politicas" value="si" required>Acepto las políticas de alquiler.
+            </label><br><br>
+            
+            <!--Botón para enviar formulario-->
+            <button type="submit">Enviar</button><br>
+        
+
+        </form>
+
+        <br><br>
+
     </main>
 
     <!--Pie de página-->

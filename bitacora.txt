@@ -56,3 +56,8 @@ paginas/reservas.html  -->  Reservas  -->  reservas.html
 │                     PIE                      │
 │             Nombre, correo y año             │
 └──────────────────────────────────────────────┘
+
+#Formulario
+1. Para el campo de correo electrónico se utilizó el tipo email, ya que este ayuda a confirmar los requisitos necesarios para que en realidad se esté ubicando allí un correo electrónico
+2. Para los campos de celular y documento, se utilizó un campo tipo text, no se usó tipo number, ya que este tipo, no nos permite digitar el número 0 al principio. Además se le limitó a 10 digitos, pero además se les agrega un inputmode=numeric, para que confirme que solo se digiten números en estos campos
+3. Para la casilla de aceptación de políticas de alquiler, se usa el tipo checkbox, lo que permite seleccionar esta opción la cual es requerida para enviar el formulario.
