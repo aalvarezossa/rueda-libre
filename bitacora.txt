@@ -62,7 +62,7 @@ paginas/reservas.html  -->  Reservas  -->  reservas.html
 2. Para el campo de documento, se utilizó un campo tipo text, no se usó tipo number, ya que este tipo, no nos permite digitar el número 0 al principio. Además se le limitó a 10 digitos, pero además se les agrega un inputmode=numeric, para que confirme que solo se digiten números en este campo
 3. Para la casilla de aceptación de políticas de alquiler, se usa el tipo checkbox, lo que permite seleccionar esta opción la cual es requerida para enviar el formulario.
 
-#Pruebas de erros de requerimientos de formularios
+#Pruebas de errores de requerimientos de formularios
     Campo       |      Dato de Pruebas      |       Resultado esperado          |               Resultado obtenido
 1. Nombre       |          an               |           Error                   | Prolonga este texto a 3 carácteres o más (actualmente tienes 2 carácteres).
 2. Documento    |           12345           |           Error                   | Se le agregaron 5 números al documento: Hazlo coincidir con el formato solicitado. El documento debe tener entre 6 y 10 números
@@ -72,3 +72,36 @@ paginas/reservas.html  -->  Reservas  -->  reservas.html
 6. Tipo de bici |           -               |           Error                   | Rellena este campo
 7. Cantidad bici|           8               |             6                     | 6
 8. Aceptar checkbox         -               |           Error                   | Marca esta casilla si quieres continuar.
+
+
+#Auditoría de accesibilidad
+Se realizó una revisión de las páginas index.html, paginas/tarifas.html y paginas/reservas.html.
+
+Hallazgos y correcciones
+-Textos alternativos: se revisó que las imágenes informativas tuvieran descripciones adecuadas y que las imágenes decorativas utilizaran alt="".
+-Jerarquía de encabezados: se verificó que cada página tuviera un encabezado principal <h1> y que los subtítulos mantuvieran un orden lógico.
+-Textos de enlaces: se revisó que los enlaces describieran su destino o acción, evitando textos genéricos como “haz clic aquí”.
+-Idioma del documento: se verificó que las tres páginas tuvieran el atributo lang="es" en la etiqueta <html>.
+-Navegación con teclado: se recorrieron los enlaces y controles utilizando Tab, Shift + Tab y Enter. Se revisó que los elementos interactivos fueran accesibles y tuvieran un indicador visual de enfoque.
+
+#Mapa de uso de color
+Se evaluaron las combinaciones de colores de la marca mediante un verificador de contraste, utilizando los criterios WCAG de 4.5:1 para texto normal y 3:1 para texto grande.
+
+-Blanco sobre Verde Ruta: 5.31:1. Apta para texto normal.
+-Blanco sobre Naranja Pedal: 2.22:1. No apta.
+-Azul Noche sobre Naranja Pedal: 7.20:1. Apta para texto normal.
+-Azul Noche sobre Crema: 14.83:1. Apta para texto normal.
+-Gris Asfalto sobre Crema: 5.57:1. Apta para texto normal.
+-Verde Ruta sobre Crema: 4.93:1. Apta para texto normal.
+-Naranja Pedal sobre Crema: 2.06:1. No apta.
+-Blanco sobre Azul Noche: 15.97:1. Apta para texto normal.
+
+#Mapa de uso de color propuesto
+-Fondo general: Crema (#FAF6EF).
+-Texto principal y títulos: Azul Noche (#14213D).
+-Texto secundario: Gris Asfalto (#5B6470).
+-Botones principales: Verde Ruta (#1E7A4F), con texto blanco.
+-Botones secundarios y destacados: Naranja Pedal (#F39A2B), con texto Azul Noche.
+-Enlaces: Verde Ruta sobre fondo Crema.
+-Encabezados oscuros: Azul Noche, con texto blanco.
+
