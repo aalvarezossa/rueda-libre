@@ -55,21 +55,21 @@
             <h3>Tus datos</h3>
 
             <label for="nombre">Nombre completo:</label><br>
-            <input type="text" id="nombre" name="nombre" required style="width: 100%; max-width: 250px; resize: vertical;""><br><br>
+            <input type="text" id="nombre" name="nombre" required style="width: 100%; max-width: 250px; resize: vertical;" minlength="3""><br><br>
 
             <label for="documento">Número de documento:</label><br>
-            <input type="text" id="documento" name="documento" required pattern="\d{10}" title="El documento debe tener 10 números" inputmode="numeric" maxlength="10" style="width: 100%; max-width: 100px; resize: vertical;"><br><br>
+            <input type="text" id="documento" name="documento" required title="El documento debe tener entre 6 y 10 números" inputmode="numeric" pattern="[0-9]{6,10}" maxlength="10" style="width: 100%; max-width: 100px; resize: vertical;"><br><br>
 
             <label for="email">Correo electrónico:</label><br>
             <input type="email" id="email" name="email" required style="width: 100%; max-width: 250px; resize: vertical;"><br><br>
 
             <label for="celular">Celular:</label><br>
-            <input type="text" id="celular" name="celular" required pattern="\d{10}" title="El celular debe contener 10 números" inputmode="numeric" maxlength="10" style="width: 100%; max-width: 100px; resize: vertical;"><br><br>
+            <input type="text" id="celular" name="celular" required pattern="3[0-9]{9}" title="Debe tener 10 números y empezar por 3" inputmode="numeric" maxlength="10" style="width: 100%; max-width: 100px; resize: vertical;"><br><br>
 
             <h3>Tu alquiler</h3>
 
             <label for="fecha_alquiler">Fecha de alquiler:</label><br>
-            <input type="datetime-local" id="fecha_alquiler" name="fecha_alquiler" required><br><br>
+            <input type="datetime-local" id="fecha_alquiler" name="fecha_alquiler" required min="2026-11-01T00:00" max="2026-12-31T23:59"><br><br>
 
             <!--Lista desplegable para tipo de bicicleta-->
             <label for="tipo_bici">Tipo de bicicleta:</label><br>
@@ -90,7 +90,7 @@
             </select><br><br>
 
             <label for="cantidad_bicicletas">Cantidad de bicicletas:</label><br>
-            <input type="text" id="cantidad_bicicletas" name="cantidad_bicicletas" required pattern="\d{2}" inputmode="numeric" maxlength="2" style="width: 100%; max-width: 40px; resize: vertical;"><br><br>
+            <input type="text" id="cantidad_bicicletas" name="cantidad_bicicletas" min="1" max="6" inputmode="numeric" maxlength="1" oninput="if(this.value > 6) this.value = 6; if(this.value < 1 && this.value !== '') this.value = 1;" style="width: 100%; max-width: 40px; resize: vertical;"><br><br>
 
             <!--Lista desplegable para recorrido guiado-->
             <label for="recorrido_guiado">¿Recorrido guiado?:</label><br>
@@ -103,7 +103,7 @@
             </select><br><br>
         
             <label for="comentarios">Comentarios:</label><br>
-            <input type="text" id="comentarios" name="comentarios" placeholder="Escribe aquí tus comentarios" style="width: 100%; max-width: 400px; height: 100px; resize: vertical;"><br><br>
+            <input type="text" id="comentarios" name="comentarios" placeholder="Escribe aquí tus comentarios" maxlength="300" style="width: 100%; max-width: 400px; height: 100px; resize: vertical;"><br><br>
 
             <h3>Confirmación</h3>
             

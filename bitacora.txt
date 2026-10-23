@@ -59,5 +59,16 @@ paginas/reservas.html  -->  Reservas  -->  reservas.html
 
 #Formulario
 1. Para el campo de correo electrónico se utilizó el tipo email, ya que este ayuda a confirmar los requisitos necesarios para que en realidad se esté ubicando allí un correo electrónico
-2. Para los campos de celular y documento, se utilizó un campo tipo text, no se usó tipo number, ya que este tipo, no nos permite digitar el número 0 al principio. Además se le limitó a 10 digitos, pero además se les agrega un inputmode=numeric, para que confirme que solo se digiten números en estos campos
+2. Para el campo de documento, se utilizó un campo tipo text, no se usó tipo number, ya que este tipo, no nos permite digitar el número 0 al principio. Además se le limitó a 10 digitos, pero además se les agrega un inputmode=numeric, para que confirme que solo se digiten números en este campo
 3. Para la casilla de aceptación de políticas de alquiler, se usa el tipo checkbox, lo que permite seleccionar esta opción la cual es requerida para enviar el formulario.
+
+#Pruebas de erros de requerimientos de formularios
+    Campo       |      Dato de Pruebas      |       Resultado esperado          |               Resultado obtenido
+1. Nombre       |          an               |           Error                   | Prolonga este texto a 3 carácteres o más (actualmente tienes 2 carácteres).
+2. Documento    |           12345           |           Error                   | Se le agregaron 5 números al documento: Hazlo coincidir con el formato solicitado. El documento debe tener entre 6 y 10 números
+3. Correo       |        ejemplocorreo      |           Error                   | Incluye "@" en la dirección de correo electrónico
+4. celular      |         1234567890        |           Error                   | Hazlo coincidir con el formato solicitado. Debe tener 10 números y empezar por 3
+5. Fecha alquiler           -               |           Error                   | Rellena este campo
+6. Tipo de bici |           -               |           Error                   | Rellena este campo
+7. Cantidad bici|           8               |             6                     | 6
+8. Aceptar checkbox         -               |           Error                   | Marca esta casilla si quieres continuar.
