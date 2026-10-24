@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
-    <link rel="icon" type="image/png" href="../img/portada.png">
+    <link rel="icon" type="image/png" href="img/portada.png">
 </head>
 <body>
 
@@ -18,12 +18,12 @@
         <p>Rueda Libre es un emprendimiento de Medellín que alquila bicicletas y organiza recorridos guiados por la ciudad. <a href="#encuentranos">Encuéntranos</a></p>
 
         <!--Menú para navegar por las 3 páginas-->
-        <nav>
-            <dl>
-                <dt><a href="index.html">Inicio</a></dt>
-                <dt><a href="paginas/tarifas.html">Tarifas y rutas</a></dt>
-                <dt><a href="paginas/reservas.html">Reservas</a></dt>
-            </dl>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
+                <li><a href="paginas/reservas.html">Reservas</a></li>
+            </ul>
         </nav>
         
     </header>
@@ -31,7 +31,7 @@
     <main>
 
         <!--Enlace para reservar ahora-->
-        <a href="/paginas/reservas.html">Reservar ahora</a>
+        <a href="paginas/reservas.html">Reservar ahora</a>
 
         <br></br>
 
@@ -45,33 +45,42 @@
         </section>
 
         <section>
-            <h2>Nuestros servicios </h2>
+            <h2>Nuestros servicios</h2>
 
-            <!--Imagen de bicicleta-->
-            <img src="img/bicicleta.jpg" alt="Bicicletas disponibles para alquiler" width="400">
+            <!-- Imagen de bicicleta -->
+            <img src="img/bicicleta.jpg"
+                alt="Bicicletas disponibles para alquiler"
+                width="400">
 
-                <dl>
-                    <article>
-                    <dt><h3>Alquiler de bicicletas</h3></dt>
-                    </article>
-                    <article>
-                    <dd><p>Alquiler de bicicletas por horas o días.<!--Enlace a tabla de tarifas-->
-                    <a href="/paginas/tarifas.html#tarifas-alquiler">Tarifas</a></p></dd>
-                    </article>
-                    <article>
-                    <dt><h3>Recorridos guiados</h3></dt>
-                    </article>
-                    <article>
-                    <dd><p>Recorridos guiados por la ciudad.</p></dd>
-                    </article>
-                    <article>
-                    <dt><h3>Asesoramiento</h3></dt>
-                    </article>
-                    <article>
-                    <dd><p>Asesoramiento sobre rutas y seguridad vial. <!--Enlace a tabla de rutas-->
-                    <a href="/paginas/tarifas.html#tarifas-recorridos">Rutas</a> </p></dd>
-                    </article>
-                </dl>
+            <article>
+                <h3>Alquiler de bicicletas</h3>
+                <p>
+                    Alquiler de bicicletas por horas o días.
+                    <a href="paginas/tarifas.html#tarifas-alquiler">
+                        Consulta las tarifas de alquiler
+                    </a>
+                </p>
+            </article>
+
+            <article>
+                <h3>Recorridos guiados</h3>
+                <p>
+                    Recorridos guiados por la ciudad.
+                    <a href="paginas/tarifas.html#tarifas-recorridos">
+                        Consulta las tarifas de los recorridos
+                    </a>
+                </p>
+            </article>
+
+            <article>
+                <h3>Asesoramiento</h3>
+                <p>
+                    Asesoramiento sobre rutas y seguridad vial.
+                    <a href="paginas/tarifas.html#tarifas-recorridos">
+                        Conoce nuestros recorridos
+                    </a>
+                </p>
+            </article>
         </section>
 
         <section>
@@ -86,7 +95,7 @@
         </section>
 
         <section>
-                <h3>Beneficios de alquilar con nosotros</h3>
+            <h2>Beneficios de alquilar con nosotros</h2>
 
                 <!--Imagen de ruta-->
                 <img src="img/ruta.jpg" alt="Beneficios de alquilar con Rueda Libre" width="400">
@@ -98,14 +107,16 @@
                 </ul>
         </section>
             
-            <section id="encuentranos">
-            <h2 id="encuentranos">Encuéntranos</h2>
+        <section id="encuentranos">
+            <h2>Encuéntranos</h2>
                 <p>Estamos ubicados en el <strong>corazón de Medellín</strong>, fácilmente accesibles por transporte público o a pie.</p>
         </section>
 
         <!--Enlace a Google Maps-->
-        <a href="www.google.com/maps/place/" target="_blank">
-            Ubicación en el mapa
+        <a href="https://www.google.com/maps/search/?api=1&query=Medellin"
+            target="_blank"
+            rel="noopener noreferrer">
+            Ver ubicación
         </a>
 
         <!--Enlace para correo electrónico-->
