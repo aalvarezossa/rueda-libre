@@ -105,3 +105,19 @@ Se evaluaron las combinaciones de colores de la marca mediante un verificador de
 -Enlaces: Verde Ruta sobre fondo Crema.
 -Encabezados oscuros: Azul Noche, con texto blanco.
 
+#CSS
+Verificación de herencia CSS:
+
+Se inspeccionó un párrafo de la página index.html utilizando las herramientas
+DevTools del navegador, en las pestañas Styles y Computed.
+
+Propiedad que se hereda:
+La propiedad font-family se hereda desde el elemento body. El párrafo utiliza
+la fuente Open Sans definida mediante la variable --fuente-texto.
+
+Propiedad que no se hereda:
+La propiedad background-color no se hereda automáticamente. Aunque el body
+tiene el fondo crema definido mediante --color-crema, el párrafo mantiene
+su fondo transparente y permite visualizar el fondo del elemento padre.
+
+La comprobación se realizó directamente en el navegador.

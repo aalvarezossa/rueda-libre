@@ -1,0 +1,95 @@
+/* Variables globales de Rueda Libre */
+:root {
+    /* Colores de marca */
+    --color-verde-ruta: #1E7A4F;
+    --color-naranja-pedal: #F39A2B;
+    --color-azul-noche: #14213D;
+    --color-crema: #FAF6EF;
+    --color-gris-asfalto: #5B6470;
+
+    /* Familias tipográficas */
+    --fuente-titulos: "Montserrat", Arial, sans-serif;
+    --fuente-texto: "Open Sans", Arial, sans-serif;
+
+    /* Escala de espaciado */
+    --espaciado-pequeno: 0.5rem;
+    --espaciado-medio: 1rem;
+    --espaciado-grande: 2rem;
+    --espaciado-extra-grande: 3rem;
+}
+
+/* Estilos generales del documento */
+body {
+    font-family: var(--fuente-texto);
+    color: var(--color-azul-noche);
+    background-color: var(--color-crema);
+}
+
+/* Fuente para todos los encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fuente-titulos);
+}
+
+/* Encabezado principal */
+header {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    padding: var(--espaciado-grande);
+}
+
+/* Enlaces */
+a {
+    color: var(--color-verde-ruta);
+}
+
+/* Botones principales */
+button {
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF;
+    font-family: var(--fuente-texto);
+    padding: var(--espaciado-pequeno) var(--espaciado-medio);
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+/* Botón secundario, si lo utilizas */
+.boton-secundario {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+}
+
+/* Campos del formulario */
+input,
+select,
+textarea {
+    font-family: var(--fuente-texto);
+    color: var(--color-azul-noche);
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 0.3rem;
+    padding: var(--espaciado-pequeno);
+    max-width: 100%;
+}
+
+/* Campos de texto y listas desplegables */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+select,
+textarea {
+    width: 100%;
+    max-width: 25rem;
+}
+
+/* Casillas de verificación */
+input[type="checkbox"] {
+    width: auto;
+}

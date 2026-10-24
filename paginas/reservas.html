@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Reservas | Rueda Libre</title>
     <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
+
+<body>
 
     <!--Encabezado-->
     <header>
@@ -29,7 +36,7 @@
         Contáctanos
         </a>
 
-        <br></br>
+        <br><br>
 
         <section>
         <!-- Lista de definiciones con horarios de atención -->
@@ -38,13 +45,14 @@
             <dl>
                 <dt><strong>Lunes - Viernes</strong></dt>
                     <dd>7:00 a.m. a 7:00 p.m.</dd>
-                <br></br>
+                <br><br>
+
                 <dt><strong>Sábados, domingos y festivos</strong></dt>
                     <dd>6:00 a.m. a 2:00 p.m.</dd>
             </dl>
         </aside>
 
-        <br></br>
+        <br><br>
 
         </section>
 
@@ -57,25 +65,22 @@
                 <legend>Tus datos</legend>
 
                 <label for="nombre">Nombre completo:</label><br>
-                <input type="text" id="nombre" name="nombre" required
-                    style="width: 100%; max-width: 250px; resize: vertical;" minlength="3">
+                <input type="text" id="nombre" name="nombre" required minlength="3">
                 <br><br>
 
                 <label for="documento">Número de documento:</label><br>
                 <input type="text" id="documento" name="documento" required
                     title="El documento debe tener entre 6 y 10 números" inputmode="numeric"
-                    pattern="[0-9]{6,10}" maxlength="10" style="width: 100%; max-width: 100px; resize: vertical;">
+                    pattern="[0-9]{6,10}" maxlength="10">
                 <br><br>
 
                 <label for="email">Correo electrónico:</label><br>
-                <input type="email" id="email" name="email" required
-                    style="width: 100%; max-width: 250px; resize: vertical;">
+                <input type="email" id="email" name="email" required>
                 <br><br>
 
                 <label for="celular">Celular:</label><br>
-                <input type="tel" id="celular" name="celular" required
-                    pattern="3[0-9]{9}" title="Debe tener 10 números y empezar por 3" inputmode="numeric"
-                    maxlength="10" style="width: 100%; max-width: 100px; resize: vertical;">
+                <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}"
+                title="Debe tener 10 números y empezar por 3" inputmode="numeric" maxlength="10" >
                 <br><br>
             </fieldset>
 
@@ -94,7 +99,8 @@
                     <option value="urbana">Urbana</option>
                     <option value="montaña">Montaña</option>
                     <option value="electrica">Eléctrica</option>
-                </select><br><br>
+                </select>
+                <br><br>
 
                 <!--Lista desplegable para tipo de plan-->
                 <label for="tipo_plan">Tipo de plan:</label><br>
@@ -103,11 +109,12 @@
                     <option value="1_hora">1 hora</option>
                     <option value="medio_dia">Medio día</option>
                     <option value="dia_completo">Día completo</option>
-                </select><br><br>
+                </select>
+                <br><br>
 
-                <label for="cantidad_bicicletas">Cantidad de bicicletas:</label><br>
                 <input type="number" id="cantidad_bicicletas" name="cantidad_bicicletas" min="1" max="6"
-                    inputmode="numeric" maxlength="1" oninput="if(this.value > 6) this.value = 6; if(this.value < 1 && this.value !== '') this.value = 1;" style="width: 100%; max-width: 40px; resize: vertical;"><br><br>
+                    step="1" value="1" required>
+                <br><br>
 
                 <!--Lista desplegable para recorrido guiado-->
                 <label for="recorrido_guiado">¿Recorrido guiado?:</label><br>
@@ -117,14 +124,15 @@
                     <option value="rios_parques">Ríos y parques</option>
                     <option value="sabores_barrio">Sabores de barrio</option>
                     <option value="palmas">Reto Las Palmas</option>
-                </select><br><br>
+                </select>
+                <br><br>
         
+                <label for="comentarios">Comentarios adicionales (opcional):</label><br>
                 <textarea id="comentarios"
                     name="comentarios"
                     rows="4"
                     maxlength="300"
                     placeholder="Escribe aquí tus comentarios"></textarea>
-                <br><br>
 
             </fieldset>
 
