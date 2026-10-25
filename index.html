@@ -25,8 +25,8 @@
 
         <!--Menú para navegar por las 3 páginas-->
         <nav aria-label="Navegación principal">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
+            <ul id="menu">
+                <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
                 <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
                 <li><a href="paginas/reservas.html">Reservas</a></li>
             </ul>
@@ -37,7 +37,7 @@
     <main>
 
         <!--Enlace para reservar ahora-->
-        <a href="paginas/reservas.html">Reservar ahora</a>
+        <a href="paginas/reservas.html" class="boton-reservar">Reservar ahora</a>
 
         <br><br>
 
@@ -62,8 +62,8 @@
                 <h3>Alquiler de bicicletas</h3>
                 <p>
                     Alquiler de bicicletas por horas o días.
-                    <a href="paginas/tarifas.html#tarifas-alquiler">
-                        Consulta las tarifas de alquiler
+                    <a href="paginas/tarifas.html#tarifas-alquiler" class="boton-secundario">
+                        Tarifas de alquiler
                     </a>
                 </p>
             </article>
@@ -72,8 +72,8 @@
                 <h3>Recorridos guiados</h3>
                 <p>
                     Recorridos guiados por la ciudad.
-                    <a href="paginas/tarifas.html#tarifas-recorridos">
-                        Consulta las tarifas de los recorridos
+                    <a href="paginas/tarifas.html#tarifas-recorridos"  class="boton-secundario">
+                        Tarifas de recorridos
                     </a>
                 </p>
             </article>
@@ -82,8 +82,8 @@
                 <h3>Asesoramiento</h3>
                 <p>
                     Asesoramiento sobre rutas y seguridad vial.
-                    <a href="paginas/tarifas.html#tarifas-recorridos">
-                        Conoce nuestros recorridos
+                    <a href="paginas/tarifas.html#tarifas-recorridos"  class="boton-secundario">
+                        Nuestros recorridos
                     </a>
                 </p>
             </article>
@@ -91,7 +91,7 @@
 
         <section>
             <h2>¿Cómo alquilar?</h2>
-                <p>Alquilar una bicicleta con Rueda Libre es muy sencillo. Solo necesitas <strong>registrarte</strong> en nuestro sitio web o en nuestras instalaciones y seguir los pasos para reservar la bicicleta que deseas.</p>
+                <p class="destacado">Alquilar una bicicleta con Rueda Libre es muy sencillo. Solo necesitas <strong>registrarte</strong> en nuestro sitio web o en nuestras instalaciones y seguir los pasos para reservar la bicicleta que deseas.</p>
                 <ol>
                     <li>Selecciona la bicicleta que deseas alquilar.</li>
                     <li>Elige la duración del alquiler.</li>
@@ -121,12 +121,15 @@
         <!--Enlace a Google Maps-->
         <a href="https://www.google.com/maps/search/?api=1&query=Medellin"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            class="boton-secundario">
             Ver ubicación
         </a>
 
+        <br><br>
+
         <!--Enlace para correo electrónico-->
-        <a href="mailto:info@ruedalibre.com">
+        <a href="mailto:info@ruedalibre.com"  class="boton-secundario">
             Contáctanos
         </a>
 

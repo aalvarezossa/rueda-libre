@@ -23,6 +23,7 @@ body {
     font-family: var(--fuente-texto);
     color: var(--color-azul-noche);
     background-color: var(--color-crema);
+    margin: 0;
 }
 
 /* Fuente para todos los encabezados */
@@ -33,6 +34,7 @@ h4,
 h5,
 h6 {
     font-family: var(--fuente-titulos);
+    color: var(--color-azul-noche);
 }
 
 /* Encabezado principal */
@@ -42,9 +44,36 @@ header {
     padding: var(--espaciado-grande);
 }
 
+/* Texto secundario */
+.texto-secundario {
+color: var(--color-gris-asfalto);
+}
+
+/* Encabezados oscuros */
+header {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    padding: var(--espaciado-grande);
+}
+
+/* Los títulos dentro del encabezado oscuro */
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6 {
+    color: #FFFFFF;
+}
+
 /* Enlaces */
 a {
     color: var(--color-verde-ruta);
+}
+
+/* Enlaces ubicados sobre encabezados oscuros */
+header a {
+    color: #FFFFFF;
 }
 
 /* Botones principales */
@@ -58,13 +87,34 @@ button {
     cursor: pointer;
 }
 
-/* Botón secundario, si lo utilizas */
+/* Enlaces que funcionan como botones principales */
+.boton-principal {
+    display: inline-block;
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF;
+    padding: var(--espaciado-pequeno) var(--espaciado-medio);
+    border-radius: 0.3rem;
+    text-decoration: none;
+}
+
+/* Botón secundario */
 .boton-secundario {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
+    padding: var(--espaciado-pequeno) var(--espaciado-medio);
+    border-radius: 0.3rem;
+    text-decoration: none;
 }
 
-/* Campos del formulario */
+/* Elementos destacados en naranja */
+.destacado {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+    padding: var(--espaciado-medio);
+    border-radius: 0.3rem;
+}
+
+/* Formularios */
 input,
 select,
 textarea {
@@ -92,4 +142,64 @@ textarea {
 /* Casillas de verificación */
 input[type="checkbox"] {
     width: auto;
+}
+
+/* Enlaces del menú */
+#menu a {
+    color: var(--color-gris-asfalto);
+}
+
+/* Página actual */
+#menu a.activo {
+    color: var(--color-verde-ruta);
+    font-weight: 600;
+}
+
+/* Estado al pasar el mouse */
+#menu a:hover {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+}
+
+/* Estado al navegar con teclado */
+#menu a:focus {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: 3px;
+}
+
+/* Botón principal de reserva */
+.boton-reservar {
+    display: inline-block;
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF;
+    font-family: var(--fuente-texto);
+    font-weight: 600;
+    text-decoration: none;
+    padding: var(--espaciado-medio) var(--espaciado-grande);
+    border-radius: 0.3rem;
+}
+
+/* Al pasar el mouse */
+.boton-reservar:hover {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+}
+
+/* Al navegar con teclado */
+.boton-reservar:focus {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+    outline: 3px solid var(--color-azul-noche);
+    outline-offset: 3px;
+}
+
+/* Indicador de foco en los campos del formulario */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--color-azul-noche);
+    outline-offset: 2px;
+    border-color: var(--color-verde-ruta);
 }

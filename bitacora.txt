@@ -121,3 +121,23 @@ tiene el fondo crema definido mediante --color-crema, el párrafo mantiene
 su fondo transparente y permite visualizar el fondo del elemento padre.
 
 La comprobación se realizó directamente en el navegador.
+
+
+
+#Conflicto de especificidad CSS:
+
+Se inspeccionó el enlace activo del menú utilizando DevTools, en la pestaña
+Styles. El selector #menu a tiene una especificidad de (1,0,1), ya que contiene
+un ID y un selector de elemento.
+
+El selector .activo tiene una especificidad de (0,1,0), ya que contiene
+una clase.
+
+La regla #menu a tiene mayor especificidad y puede sobrescribir el color
+definido en .activo. Por esta razón, el color verde de la página activa
+no se aplicaba como se esperaba.
+
+Se corrigió el conflicto utilizando el selector #menu a.activo, que tiene
+una especificidad de (1,1,1), sin utilizar !important ni estilos en línea.
+
+
