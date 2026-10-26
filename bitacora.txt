@@ -108,43 +108,31 @@ Se evaluaron las combinaciones de colores de la marca mediante un verificador de
 #CSS
 Verificación de herencia CSS:
 
-Se inspeccionó un párrafo de la página index.html utilizando las herramientas
-DevTools del navegador, en las pestañas Styles y Computed.
+Se inspeccionó un párrafo de la página index.html utilizando las herramientas DevTools del navegador, en las pestañas Styles y Computed.
 
 Propiedad que se hereda:
-La propiedad font-family se hereda desde el elemento body. El párrafo utiliza
-la fuente Open Sans definida mediante la variable --fuente-texto.
+La propiedad font-family se hereda desde el elemento body. El párrafo utiliza la fuente Open Sans definida mediante la variable --fuente-texto.
 
 Propiedad que no se hereda:
-La propiedad background-color no se hereda automáticamente. Aunque el body
-tiene el fondo crema definido mediante --color-crema, el párrafo mantiene
-su fondo transparente y permite visualizar el fondo del elemento padre.
-
-La comprobación se realizó directamente en el navegador.
+La propiedad background-color no se hereda automáticamente. Aunque el body tiene el fondo crema definido mediante --color-crema, el párrafo mantiene su fondo 
+transparente y permite visualizar el fondo del elemento padre. La comprobación se realizó directamente en el navegador.
 
 
 
 #Conflicto de especificidad CSS:
 
-Se inspeccionó el enlace activo del menú utilizando DevTools, en la pestaña
-Styles. El selector #menu a tiene una especificidad de (1,0,1), ya que contiene
+Se inspeccionó el enlace activo del menú utilizando DevTools, en la pestaña Styles. El selector #menu a tiene una especificidad de (1,0,1), ya que contiene 
 un ID y un selector de elemento.
 
-El selector .activo tiene una especificidad de (0,1,0), ya que contiene
-una clase.
+El selector .activo tiene una especificidad de (0,1,0), ya que contiene una clase.
 
-La regla #menu a tiene mayor especificidad y puede sobrescribir el color
-definido en .activo. Por esta razón, el color verde de la página activa
-no se aplicaba como se esperaba.
-
-Se corrigió el conflicto utilizando el selector #menu a.activo, que tiene
-una especificidad de (1,1,1), sin utilizar !important ni estilos en línea.
+La regla #menu a tiene mayor especificidad y puede sobrescribir el color definido en .activo. Por esta razón, el color verde de la página activa no se aplicaba
+como se esperaba. Se corrigió el conflicto utilizando el selector #menu a.activo, que tiene una especificidad de (1,1,1), sin utilizar !important ni estilos en línea.
 
 
 #Verificación del modelo de caja:
 
-Se inspeccionó una tarjeta de servicio de index.html utilizando DevTools,
-en la pestaña Computed y el apartado Box Model.
+Se inspeccionó una tarjeta de servicio de index.html utilizando DevTools, en la pestaña Computed y el apartado Box Model.
 
 Antes de aplicar box-sizing: border-box:
 Ancho total de la tarjeta: 413.6 px.
@@ -152,6 +140,32 @@ Ancho total de la tarjeta: 413.6 px.
 Después de aplicar box-sizing: border-box:
 Ancho total de la tarjeta: 431.2 px.
 
-La propiedad box-sizing: border-box permite que el ancho declarado incluya
-el contenido, el relleno y el borde. Esto facilita controlar las dimensiones
+La propiedad box-sizing: border-box permite que el ancho declarado incluya el contenido, el relleno y el borde. Esto facilita controlar las dimensiones
 de las tarjetas y evita que su ancho total aumente inesperadamente.
+
+
+# Bitácora de desarrollo — Rueda Libre
+
+# Cierre de la semana y lanzamiento v1.0
+
+Durante la semana se construyó el sitio web Rueda Libre, una página orientada a la promoción de servicios de alquiler de bicicletas y recorridos en Medellín.
+
+# Resumen de los MiniRetos:
+
+- 1. Configurar el entorno de trabajo y crear el documento HTML base del sitio, comprobando en DevTools cómo se solicita y se recibe una página.
+- 2. Estructurar el contenido de la página de inicio con una jerarquía de encabezados correcta, párrafos, listas, imágenes y enlaces.
+- 3. Presentar datos tabulares con tablas accesibles y conectar páginas ubicadas en carpetas distintas usando rutas relativas.
+- 4. Integrar las 3 páginas en un sitio navegable con un menú y un bloque final comunes, y una página de reservas inicial.
+- 5. Reestructurar las 3 páginas con etiquetas semánticas, manteniendo su contenido y su navegación.
+- 6. Construir un formulario completo y bien organizado, eligiendo el control más adecuado para cada dato.
+- 7. Aplicar validación nativa a partir de reglas de negocio y garantizar que el formulario sea usable con el teclado.
+- 8. Auditar y corregir la accesibilidad del sitio, validar el contraste de la paleta de marca y publicar el sitio en GitHub Pages.
+- 9. Crear y conectar una hoja de estilos externa con variables, tipografías de Google Fonts y colores de marca aplicados por herencia.
+-10. Estilizar navegación, enlaces, botones y campos con selectores de clase, descendientes y pseudoclases resolviendo conflictos de cascada y especificidad.
+-11. Controlar el tamaño y el espaciado de los elementos con el box model, box-sizing y unidades relativas.
+-12. Aplicar posicionamiento a los últimos componentes, consolidar el estilo de las 3 páginas y publicar la versión 1.0.
+
+# ¿Qué mejoraría?
+
+En futuras versiones mejoraría la experiencia móvil, incorporaría un sistema real de reservas y disponibilidad de bicicletas, y conectaría el formulario
+con un servicio que permita recibir y administrar solicitudes.
