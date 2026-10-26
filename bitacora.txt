@@ -141,3 +141,17 @@ Se corrigió el conflicto utilizando el selector #menu a.activo, que tiene
 una especificidad de (1,1,1), sin utilizar !important ni estilos en línea.
 
 
+#Verificación del modelo de caja:
+
+Se inspeccionó una tarjeta de servicio de index.html utilizando DevTools,
+en la pestaña Computed y el apartado Box Model.
+
+Antes de aplicar box-sizing: border-box:
+Ancho total de la tarjeta: 413.6 px.
+
+Después de aplicar box-sizing: border-box:
+Ancho total de la tarjeta: 431.2 px.
+
+La propiedad box-sizing: border-box permite que el ancho declarado incluya
+el contenido, el relleno y el borde. Esto facilita controlar las dimensiones
+de las tarjetas y evita que su ancho total aumente inesperadamente.

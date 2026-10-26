@@ -7,6 +7,13 @@
     --color-crema: #FAF6EF;
     --color-gris-asfalto: #5B6470;
 
+/* Cálculo uniforme de tamaños */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
     /* Familias tipográficas */
     --fuente-titulos: "Montserrat", Arial, sans-serif;
     --fuente-texto: "Open Sans", Arial, sans-serif;
@@ -203,3 +210,151 @@ textarea:focus {
     outline-offset: 2px;
     border-color: var(--color-verde-ruta);
 }
+
+/* Contenido principal */
+main {
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: var(--espaciado-medio);
+}
+
+/* Portada de inicio */
+.portada {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenedor de los servicios */
+#servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-grande);
+}
+
+/* Tarjetas de servicios */
+.tarjeta-servicio {
+    flex: 1 1 18rem;
+    padding: var(--espaciado-medio);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 0.75rem;
+    background-color: #FFFFFF;
+}
+
+/* Imágenes de las tarjetas */
+.tarjeta-servicio img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: var(--espaciado-medio);
+}
+
+
+/* Tablas de tarifas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--espaciado-grande);
+    background-color: #FFFFFF;
+}
+
+/* Celdas y encabezados */
+th,
+td {
+    padding: var(--espaciado-medio);
+    border: 1px solid var(--color-gris-asfalto);
+    text-align: left;
+}
+
+/* Encabezados de tabla */
+thead th {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+/* Título de la tabla */
+caption {
+    caption-side: top;
+    padding: var(--espaciado-medio);
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    color: var(--color-azul-noche);
+}
+
+/* Formulario de reservas */
+form {
+    width: 100%;
+    max-width: 45rem;
+    margin: 0 auto;
+}
+
+/* Grupos del formulario */
+.grupo-formulario {
+    margin-bottom: var(--espaciado-grande);
+    padding: var(--espaciado-grande);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 0.75rem;
+    background-color: #FFFFFF;
+}
+
+/* Títulos de los grupos */
+.grupo-formulario legend {
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    color: var(--color-azul-noche);
+    padding: 0 var(--espaciado-pequeno);
+}
+
+/* Etiquetas encima de los campos */
+.grupo-formulario label {
+    display: block;
+    margin-bottom: var(--espaciado-pequeno);
+    color: var(--color-azul-noche);
+    font-weight: 600;
+}
+
+/* Campos del formulario */
+.grupo-formulario input:not([type="checkbox"]),
+.grupo-formulario select,
+.grupo-formulario textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: var(--espaciado-medio);
+}
+
+/* Botón de envío */
+.grupo-formulario button {
+    padding: var(--espaciado-medio) var(--espaciado-grande);
+    font-size: 1rem;
+}
+
+/* Menú de navegación */
+#menu {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--espaciado-medio);
+    list-style: none;
+    margin: 0;
+    padding: var(--espaciado-medio);
+}
+
+/* Elementos de la lista */
+#menu a {
+    display: inline-block;
+    padding: var(--espaciado-pequeno) var(--espaciado-medio);
+    text-decoration: none;
+}
+
+#servicios h2 {
+    flex-basis: 100%;
+}
+
