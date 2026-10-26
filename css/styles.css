@@ -358,3 +358,55 @@ form {
     flex-basis: 100%;
 }
 
+/* Etiqueta de novedad en la tarjeta */
+.tarjeta-electrica {
+    position: relative;
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: var(--espaciado-pequeno);
+    right: var(--espaciado-pequeno);
+    right: var(--espaciado-pequeno);
+    z-index: 1;
+
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Acceso fijo a WhatsApp */
+.boton-whatsapp {
+    position: fixed;
+    right: var(--espaciado-medio);
+    bottom: var(--espaciado-medio);
+    z-index: 1000;
+
+    display: inline-block;
+    padding: 0.85rem 1.2rem;
+    border-radius: 999px;
+
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 20%);
+}
+
+.boton-whatsapp:hover {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+}
+
+.boton-whatsapp:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: 3px;
+}
+
+/* Espacio inferior para el acceso fijo de WhatsApp */
+body {
+    padding-bottom: 6rem;
+}
