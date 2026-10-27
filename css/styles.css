@@ -146,12 +146,18 @@ header a {
 
 /* Portada de inicio */
 .portada {
-    min-height: 60vh;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.imagen-portada {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
 }
 
 
@@ -393,10 +399,27 @@ button {
     border-radius: 0.3rem;
 }
 
+/* Estado hover del boton secundario */
+
+.boton-secundario:hover {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    outline: 3px solid var(--color-naranja-pedal);
+}
+
+/* Estado de foco del botón de reserva */
+.boton-secundario:focus {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    outline: 3px solid var(--color-azul noche);
+    outline-offset: 3px;
+}
+
 /* Estado hover del botón de reserva */
 .boton-reservar:hover {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
+    outline-offset: 3px solid var(--color-azul-noche);
 }
 
 /* Estado de foco del botón de reserva */
@@ -404,7 +427,7 @@ button {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
     outline: 3px solid var(--color-azul-noche);
-    outline-offset: 3px;
+    outline-offset: 3px solid var(--color-azul-noche);
 }
 
 
@@ -434,6 +457,7 @@ button {
 .boton-whatsapp:hover {
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
+    outline: 3px solid var(--color-naranja-pedal);
 }
 
 /* Estado de foco de WhatsApp */
