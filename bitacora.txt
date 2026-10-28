@@ -179,3 +179,10 @@ separar los enlaces.
 El pie de página se reorganizó en 3 bloques: marca, contacto y horario. Se utilizó Flexbox para distrirlos en fila, alinearlos en la parte superior
 y permitir su reorganización cuando disminuye el ancho de la ventana.
 
+#Cuadrícula de la flota con Grid y Flexbox.
+
+Pruebas en DevTools:
+- A 1280 px: 4 columnas.
+- A 900 px: 3 columnas.
+- A 500 px: 1 columna.
+
