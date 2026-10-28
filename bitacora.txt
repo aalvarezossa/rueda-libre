@@ -169,3 +169,13 @@ Durante la semana se construyó el sitio web Rueda Libre, una página orientada 
 
 En futuras versiones mejoraría la experiencia móvil, incorporaría un sistema real de reservas y disponibilidad de bicicletas, y conectaría el formulario
 con un servicio que permita recibir y administrar solicitudes.
+
+
+#Distribución con Flexbox.
+
+Se modificó el encabezado para distribuir el nombre del negocio y el menú en extremos opuestos, utilizando Flexbox y alineación vertical centrada.
+La lista de navegación ahora utiliza display: flex, gap y flex-wrap. Se eliminaron los márgenes y el inline-block utilizados anteriormente para
+separar los enlaces.
+El pie de página se reorganizó en 3 bloques: marca, contacto y horario. Se utilizó Flexbox para distrirlos en fila, alinearlos en la parte superior
+y permitir su reorganización cuando disminuye el ancho de la ventana.
+

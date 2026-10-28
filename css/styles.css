@@ -379,6 +379,22 @@ button {
     text-decoration: none;
 }
 
+/* Estado hover del boton secundario */
+
+.boton-secundario:hover {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    outline: 3px solid var(--color-naranja-pedal);
+}
+
+/* Estado de foco del botón de secundario */
+.boton-secundario:focus {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    outline: 3px solid var(--color-azul noche);
+    outline-offset: 3px;
+}
+
 /* Elementos destacados en naranja */
 .destacado {
     background-color: var(--color-naranja-pedal);
@@ -397,22 +413,6 @@ button {
     text-decoration: none;
     padding: var(--espaciado-medio) var(--espaciado-grande);
     border-radius: 0.3rem;
-}
-
-/* Estado hover del boton secundario */
-
-.boton-secundario:hover {
-    background-color: var(--color-azul-noche);
-    color: #FFFFFF;
-    outline: 3px solid var(--color-naranja-pedal);
-}
-
-/* Estado de foco del botón de reserva */
-.boton-secundario:focus {
-    background-color: var(--color-azul-noche);
-    color: #FFFFFF;
-    outline: 3px solid var(--color-azul noche);
-    outline-offset: 3px;
 }
 
 /* Estado hover del botón de reserva */
@@ -446,7 +446,7 @@ button {
     padding: 0.85rem 1.2rem;
     border-radius: 999px;
 
-    background-color: var(--color-verde-ruta);
+    background-color: rgb(37, 211, 102);
     color: #FFFFFF;
     font-weight: 700;
     text-decoration: none;
@@ -455,13 +455,84 @@ button {
 
 /* Estado hover de WhatsApp */
 .boton-whatsapp:hover {
-    background-color: var(--color-azul-noche);
+    background-color: rgb(18, 140, 126);
     color: #FFFFFF;
     outline: 3px solid var(--color-naranja-pedal);
 }
 
 /* Estado de foco de WhatsApp */
 .boton-whatsapp:focus-visible {
-    outline: 3px solid var(--color-naranja-pedal);
+    outline: 3px solid rgb(18, 140, 126);
     outline-offset: 3px;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Menú de navegación */
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementos de la lista */
+#menu li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces del menú */
+#menu a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+}
+
+.marca {
+    flex: 0 1 auto;
+}
+
+.marca h1,
+.marca p {
+    margin-top: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--color-azul-noche);
+    color: white;
+}
+
+footer > div {
+    flex: 1 1 12rem;
+}
+
+footer h3 {
+    margin-top: 0;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: white;
 }
