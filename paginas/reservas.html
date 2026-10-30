@@ -12,14 +12,11 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<!--Enlace de WhatsApp en la esquina inferior derecha-->
-
-<a
-    class="boton-whatsapp" href="https://wa.me/5730000000000" target="_blank" rel="noopener noreferrer"
-    aria-label="Contactar por WhatsApp, se abre en una nueva pestaña">WhatsApp
-</a>
-
 <body>
+
+    <!--Enlace de WhatsApp en la esquina inferior derecha-->
+    <a class="boton-whatsapp" href="https://wa.me/5730000000000" target="_blank" rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp, se abre en una nueva pestaña">WhatsApp</a>
 
     <!--Encabezado-->
     <header>
@@ -31,15 +28,13 @@
             <ul id="menu">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="tarifas.html">Tarifas y rutas</a></li>
-                <li><a href="reservas.html"  class="activo" aria-current="page">Reservas</a></li>
+                <li><a href="reservas.html" class="activo" aria-current="page">Reservas</a></li>
             </ul>
         </nav>
-        
+
     </header>
 
     <main>
-
-        <br><br>
 
         <div class="reserva-layout">
 
@@ -48,78 +43,67 @@
                 <!--Formulario de reserva-->
                 <h2>Formulario de Reserva</h2>
 
-                <form action="php" method="post">
-                    
-                    <fieldset class="grupo formulario">
+                <!-- action="#" es temporal: se reemplaza cuando exista el procesamiento de la reserva -->
+                <form action="#" method="post">
+
+                    <fieldset class="grupo-formulario">
                         <legend>Tus datos</legend>
 
-                        <label for="nombre">Nombre completo:</label><br>
+                        <label for="nombre">Nombre completo:</label>
                         <input type="text" id="nombre" name="nombre" required minlength="3">
-                        <br><br>
 
                         <div class="fila-campos">
 
                             <div class="campo">
-
-                                <label for="documento">Número de documento:</label><br>
+                                <label for="documento">Número de documento:</label>
                                 <input type="text" id="documento" name="documento" required
                                     title="El documento debe tener entre 6 y 10 números" inputmode="numeric"
                                     pattern="[0-9]{6,10}" maxlength="10">
-                                <br><br>
-                            
                             </div>
 
                             <div class="campo">
-
-                                <label for="celular">Celular:</label><br>
+                                <label for="celular">Celular:</label>
                                 <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}"
-                                title="Debe tener 10 números y empezar por 3" inputmode="numeric" maxlength="10" >
-                                <br><br>
-                            
+                                    title="Debe tener 10 números y empezar por 3" inputmode="numeric" maxlength="10">
                             </div>
 
                         </div>
 
-                        <label for="email">Correo electrónico:</label><br>
+                        <label for="email">Correo electrónico:</label>
                         <input type="email" id="email" name="email" required>
-                        <br><br>
 
                     </fieldset>
 
-                    <fieldset class="grupo formulario">
+                    <fieldset class="grupo-formulario">
                         <legend>Tu alquiler</legend>
 
-                        <label for="fecha_alquiler">Fecha de alquiler:</label><br>
-                        <input type="datetime-local" id="fecha_alquiler" name="fecha_alquiler" required
-                            min="2026-11-01T00:00" max="2026-12-31T23:59">
-                        <br><br>
+                        <label for="fecha_alquiler">Fecha de alquiler:</label>
+                        <input type="datetime-local" id="fecha_alquiler" name="fecha_alquiler" required>
 
                         <!--Lista desplegable para tipo de bicicleta-->
-                        <label for="tipo_bici">Tipo de bicicleta:</label><br>
+                        <label for="tipo_bici">Tipo de bicicleta:</label>
                         <select id="tipo_bici" name="tipo_bici" required>
                             <option value="" disabled selected>Elige una opción...</option>
                             <option value="urbana">Urbana</option>
                             <option value="montaña">Montaña</option>
                             <option value="electrica">Eléctrica</option>
                         </select>
-                        <br><br>
 
                         <!--Lista desplegable para tipo de plan-->
-                        <label for="tipo_plan">Tipo de plan:</label><br>
+                        <label for="tipo_plan">Tipo de plan:</label>
                         <select id="tipo_plan" name="tipo_plan" required>
                             <option value="" disabled selected>Elige una opción...</option>
                             <option value="1_hora">1 hora</option>
                             <option value="medio_dia">Medio día</option>
                             <option value="dia_completo">Día completo</option>
                         </select>
-                        <br><br>
 
+                        <label for="cantidad_bicicletas">Cantidad de bicicletas (máx. 6):</label>
                         <input type="number" id="cantidad_bicicletas" name="cantidad_bicicletas" min="1" max="6"
                             step="1" value="1" required>
-                        <br><br>
 
                         <!--Lista desplegable para recorrido guiado-->
-                        <label for="recorrido_guiado">¿Recorrido guiado?:</label><br>
+                        <label for="recorrido_guiado">¿Recorrido guiado?:</label>
                         <select id="recorrido_guiado" name="recorrido_guiado" required>
                             <option value="" disabled selected>Elige una opción...</option>
                             <option value="no_recorrido">No, gracias</option>
@@ -127,31 +111,24 @@
                             <option value="sabores_barrio">Sabores de barrio</option>
                             <option value="palmas">Reto Las Palmas</option>
                         </select>
-                        <br><br>
-                
-                        <label for="comentarios">Comentarios adicionales (opcional):</label><br>
-                        <textarea id="comentarios"
-                            name="comentarios"
-                            rows="4"
-                            maxlength="300"
+
+                        <label for="comentarios">Comentarios adicionales (opcional):</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"
                             placeholder="Escribe aquí tus comentarios"></textarea>
 
                     </fieldset>
 
-                    <fieldset class="grupo formulario">
+                    <fieldset class="grupo-formulario">
 
                         <legend>Confirmación</legend>
-                    
+
                         <!--Casilla para aceptación de las políticas de alquiler-->
                         <input type="checkbox" id="aceptacion_politicas" name="aceptacion_politicas" value="si" required>
-                        <label for="aceptacion_politicas">
-                            Acepto las políticas de alquiler.
-                        </label>
-                        <br><br>
-                        
+                        <label for="aceptacion_politicas">Acepto las políticas de alquiler.</label>
+
                         <!--Botón para enviar formulario-->
-                        <button type="submit">Enviar</button><br>
-                
+                        <button type="submit">Enviar</button>
+
                     </fieldset>
 
                 </form>
@@ -162,32 +139,24 @@
 
                 <h2>Información de contacto</h2>
 
-                <p>¿Tienes preguntas sobre los alquileres o recorridos?
-                    Estamos aquí para ayudarte.
-                </p>
+                <p>¿Tienes preguntas sobre los alquileres o recorridos? Estamos aquí para ayudarte.</p>
 
                 <p>
                     <strong>Correo:</strong>
-                    <a href="mailto:info@ruedalibre.com">
-                        info@ruedalibre.com
-                    </a>
+                    <a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a>
                 </p>
 
                 <!-- Horarios de atención -->
                 <h3>Horarios de atención</h3>
                 <p>Lunes a Viernes: 7:00 a.m. a 7:00 p.m.</p>
                 <p>Sábados, domingos y festivos: 6:00 a.m. a 2:00 p.m.</p>
-                        
+
                 <!-- Enlace de correo de contacto-->
-                <a href="mailto:info@ruedalibre.com"  class="boton-reservar">
-                Contáctanos
-                </a>
+                <a href="mailto:info@ruedalibre.com" class="boton-reservar">Contáctanos</a>
 
             </aside>
 
         </div>
-
-        <br><br>
 
     </main>
 
@@ -195,6 +164,15 @@
     <footer>
         <p>&copy; Rueda Libre | Correo: <a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a> | 2026</p>
     </footer>
+
+    <script>
+        // La fecha mínima de alquiler es el momento actual (sin fecha máxima fija)
+        (function () {
+            var ahora = new Date();
+            ahora.setMinutes(ahora.getMinutes() - ahora.getTimezoneOffset());
+            document.getElementById("fecha_alquiler").min = ahora.toISOString().slice(0, 16);
+        })();
+    </script>
 
 </body>
 </html>

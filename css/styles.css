@@ -2,7 +2,6 @@
 1. VARIABLES Y CONFIGURACIÓN GLOBAL
    ========================================= */
 
-/* Variables globales de Rueda Libre */
 :root {
     /* Colores de marca */
     --color-verde-ruta: #1E7A4F;
@@ -22,7 +21,6 @@
     --espaciado-extra-grande: 3rem;
 }
 
-/* Cálculo uniforme de tamaños */
 *,
 *::before,
 *::after {
@@ -34,7 +32,6 @@
 2. ESTILOS GENERALES
    ========================================= */
 
-/* Estilos generales del documento */
 body {
     font-family: var(--fuente-texto);
     color: var(--color-azul-noche);
@@ -43,28 +40,19 @@ body {
     padding-bottom: 6rem;
 }
 
-/* Fuente y color para todos los encabezados */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--fuente-titulos);
     color: var(--color-azul-noche);
 }
 
-/* Texto secundario */
 .texto-secundario {
     color: var(--color-gris-asfalto);
 }
 
-/* Enlaces generales */
 a {
     color: var(--color-verde-ruta);
 }
 
-/* Contenido principal */
 main {
     width: 100%;
     max-width: 70rem;
@@ -72,19 +60,35 @@ main {
     padding: var(--espaciado-medio);
 }
 
+/* Separación entre secciones (reemplaza los <br>) */
+main > section + section {
+    margin-top: var(--espaciado-grande);
+}
+
+/* Grupo de botones en línea */
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-medio);
+    margin-top: var(--espaciado-medio);
+}
+
 
 /* =========================================
 3. ENCABEZADO Y NAVEGACIÓN
    ========================================= */
 
-/* Encabezado principal */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
     padding: var(--espaciado-grande);
 }
 
-/* Títulos dentro del encabezado oscuro */
 header h1,
 header h2,
 header h3,
@@ -94,57 +98,67 @@ header h6 {
     color: #FFFFFF;
 }
 
-/* Enlaces ubicados sobre encabezados oscuros */
 header a {
     color: #FFFFFF;
+}
+
+.marca {
+    flex: 0 1 auto;
+}
+
+.marca h1,
+.marca p {
+    margin-top: 0;
 }
 
 /* Menú de navegación */
 #menu {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: var(--espaciado-medio);
+    gap: 1rem;
     list-style: none;
     margin: 0;
-    padding: var(--espaciado-medio);
+    padding: 0;
 }
 
-/* Enlaces del menú */
+#menu li {
+    margin: 0;
+    padding: 0;
+}
+
 #menu a {
-    display: inline-block;
-    padding: var(--espaciado-pequeno) var(--espaciado-medio);
-    color: var(--color-gris-asfalto);
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: #FFFFFF;
     text-decoration: none;
+    border-radius: 0.3rem;
 }
 
 /* Página actual */
 #menu a.activo {
-    color: var(--color-verde-ruta);
+    color: var(--color-naranja-pedal);
     font-weight: 600;
 }
 
-/* Estado al pasar el mouse */
-#menu a:hover {
-    background-color: var(--color-azul-noche);
-    color: #FFFFFF;
+/* Hover y foco: fondo naranja para que se note sobre el encabezado oscuro */
+#menu a:hover,
+#menu a:focus {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
 }
 
-/* Estado al navegar con teclado */
 #menu a:focus {
-    background-color: var(--color-azul-noche);
-    color: #FFFFFF;
-    outline: 3px solid var(--color-naranja-pedal);
+    outline: 3px solid #FFFFFF;
     outline-offset: 3px;
 }
 
 
 /* =========================================
-4. PORTADA
+4. PORTADA E IMÁGENES
    ========================================= */
 
-/* Portada de inicio */
 .portada {
     min-height: 20vh;
     display: flex;
@@ -154,10 +168,17 @@ header a {
     text-align: center;
 }
 
+/* Imagen de portada: ocupa todo su contenedor */
 .imagen-portada {
-    width: 300px;
+    display: block;
+    width: 100%;
     height: auto;
-    max-width: 100%;
+    border-radius: 0.75rem;
+}
+
+/* Imágenes sueltas (bicicleta, ruta, logo): ancho limitado */
+.portada .imagen-portada {
+    max-width: 30rem;
 }
 
 
@@ -165,19 +186,17 @@ header a {
 5. SERVICIOS Y TARJETAS
    ========================================= */
 
-/* Contenedor de los servicios */
 #servicios {
     display: flex;
     flex-wrap: wrap;
     gap: var(--espaciado-grande);
 }
 
-/* Título de la sección de servicios */
 #servicios h2 {
     flex-basis: 100%;
+    margin: 0;
 }
 
-/* Tarjetas de servicios */
 .tarjeta-servicio {
     flex: 1 1 18rem;
     padding: var(--espaciado-medio);
@@ -186,7 +205,6 @@ header a {
     background-color: #FFFFFF;
 }
 
-/* Imágenes de las tarjetas */
 .tarjeta-servicio img {
     display: block;
     width: 100%;
@@ -195,12 +213,10 @@ header a {
     margin-bottom: var(--espaciado-medio);
 }
 
-/* Tarjeta de bicicletas eléctricas */
 .tarjeta-electrica {
     position: relative;
 }
 
-/* Etiqueta de novedad */
 .etiqueta-nuevo {
     position: absolute;
     top: var(--espaciado-pequeno);
@@ -219,7 +235,6 @@ header a {
 6. TARIFAS Y TABLAS
    ========================================= */
 
-/* Tablas de tarifas */
 .contenedor-tabla {
     width: 100%;
     max-width: 100%;
@@ -246,14 +261,12 @@ header a {
     color: white;
 }
 
-/* Pantallas anchas y orientación horizontal */
 @media screen and (min-width: 768px) and (orientation: landscape), screen and (min-width: 1024px) {
     .contenedor-tabla table {
         width: 100%;
     }
 }
 
-/* Celdas y encabezados */
 th,
 td {
     padding: var(--espaciado-pequeno);
@@ -261,13 +274,11 @@ td {
     text-align: left;
 }
 
-/* Encabezados de tabla */
 thead th {
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
 }
 
-/* Título de la tabla */
 caption {
     caption-side: top;
     padding: var(--espaciado-medio);
@@ -276,18 +287,17 @@ caption {
     color: var(--color-azul-noche);
 }
 
+
 /* =========================================
 7. FORMULARIOS
    ========================================= */
 
-/* Formulario de reservas */
 form {
     width: 100%;
     max-width: 45rem;
     margin: 0 auto;
 }
 
-/* Estilos generales de los campos */
 input,
 select,
 textarea {
@@ -300,7 +310,6 @@ textarea {
     max-width: 100%;
 }
 
-/* Campos de texto y listas desplegables */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -312,12 +321,10 @@ textarea {
     max-width: 25rem;
 }
 
-/* Casillas de verificación */
 input[type="checkbox"] {
     width: auto;
 }
 
-/* Grupos del formulario */
 .grupo-formulario {
     margin-bottom: var(--espaciado-grande);
     padding: var(--espaciado-grande);
@@ -326,7 +333,6 @@ input[type="checkbox"] {
     background-color: #FFFFFF;
 }
 
-/* Títulos de los grupos */
 .grupo-formulario legend {
     font-family: var(--fuente-titulos);
     font-weight: 600;
@@ -334,7 +340,6 @@ input[type="checkbox"] {
     padding: 0 var(--espaciado-pequeno);
 }
 
-/* Etiquetas encima de los campos */
 .grupo-formulario label {
     display: block;
     margin-bottom: var(--espaciado-pequeno);
@@ -342,7 +347,6 @@ input[type="checkbox"] {
     font-weight: 600;
 }
 
-/* Campos del formulario */
 .grupo-formulario input:not([type="checkbox"]),
 .grupo-formulario select,
 .grupo-formulario textarea {
@@ -352,7 +356,6 @@ input[type="checkbox"] {
     margin-bottom: var(--espaciado-medio);
 }
 
-/* Indicador de foco en los campos */
 input:focus,
 select:focus,
 textarea:focus {
@@ -361,7 +364,6 @@ textarea:focus {
     border-color: var(--color-verde-ruta);
 }
 
-/* Botón de envío del formulario */
 .grupo-formulario button {
     padding: var(--espaciado-medio) var(--espaciado-grande);
     font-size: 1rem;
@@ -372,7 +374,6 @@ textarea:focus {
 8. BOTONES
    ========================================= */
 
-/* Botones principales */
 button {
     background-color: var(--color-verde-ruta);
     color: #FFFFFF;
@@ -383,7 +384,6 @@ button {
     cursor: pointer;
 }
 
-/* Enlaces que funcionan como botones principales */
 .boton-principal {
     display: inline-block;
     background-color: var(--color-verde-ruta);
@@ -395,6 +395,7 @@ button {
 
 /* Botón secundario */
 .boton-secundario {
+    display: inline-block;
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
     padding: var(--espaciado-pequeno) var(--espaciado-medio);
@@ -402,19 +403,16 @@ button {
     text-decoration: none;
 }
 
-/* Estado hover del boton secundario */
-
 .boton-secundario:hover {
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
     outline: 3px solid var(--color-naranja-pedal);
 }
 
-/* Estado de foco del botón de secundario */
 .boton-secundario:focus {
     background-color: var(--color-azul-noche);
     color: #FFFFFF;
-    outline: 3px solid var(--color-azul noche);
+    outline: 3px solid var(--color-azul-noche);
     outline-offset: 3px;
 }
 
@@ -438,27 +436,23 @@ button {
     border-radius: 0.3rem;
 }
 
-/* Estado hover del botón de reserva */
 .boton-reservar:hover {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
-    outline-offset: 3px solid var(--color-azul-noche);
 }
 
-/* Estado de foco del botón de reserva */
 .boton-reservar:focus {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
     outline: 3px solid var(--color-azul-noche);
-    outline-offset: 3px solid var(--color-azul-noche);
+    outline-offset: 3px;
 }
 
 
 /* =========================================
-9. ACCESO FIJO A WHATSAPP Y AJUSTES
+9. ACCESO FIJO A WHATSAPP
    ========================================= */
 
-/* Acceso fijo a WhatsApp */
 .boton-whatsapp {
     position: fixed;
     right: var(--espaciado-medio);
@@ -469,72 +463,28 @@ button {
     padding: 0.85rem 1.2rem;
     border-radius: 999px;
 
-    background-color: rgb(37, 211, 102);
+    background-color: var(--color-verde-ruta);
     color: #FFFFFF;
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 20%);
 }
 
-/* Estado hover de WhatsApp */
 .boton-whatsapp:hover {
     background-color: rgb(18, 140, 126);
     color: #FFFFFF;
     outline: 3px solid var(--color-naranja-pedal);
 }
 
-/* Estado de foco de WhatsApp */
 .boton-whatsapp:focus-visible {
-    outline: 3px solid rgb(18, 140, 126);
+    outline: 3px solid var(--color-verde-ruta);
     outline-offset: 3px;
 }
 
+
 /* =========================================
-10. ENCABEZADOS Y FOOTERS CON FLEXBOX
+10. PIE DE PÁGINA
    ========================================= */
-
-/* Encabezado */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-/* Menú de navegación */
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Elementos de la lista */
-#menu li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Enlaces del menú */
-#menu a {
-    display: block;
-    padding: 0.5rem 0.75rem;
-    text-decoration: none;
-}
-
-.marca {
-    flex: 0 1 auto;
-}
-
-.marca h1,
-.marca p {
-    margin-top: 0;
-}
 
 footer {
     display: flex;
@@ -564,11 +514,11 @@ footer a {
     color: white;
 }
 
+
 /* =========================================
 11. FLOTA DE BICICLETAS CON CSS GRID
    ========================================= */
 
-/* Cuadrícula adaptable */
 .cuadricula-flota {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -577,7 +527,6 @@ footer a {
     margin-top: 2rem;
 }
 
-/* Tarjetas individuales */
 .tarjeta-bicicleta {
     display: flex;
     flex-direction: column;
@@ -588,39 +537,33 @@ footer a {
     border-radius: 0.75rem;
 }
 
-/* Fotografías */
 .tarjeta-bicicleta img {
     width: 100%;
-    aspect-ratio: 3 / 3;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 0.5rem;
 }
 
-/* Nombre del modelo */
 .tarjeta-bicicleta h3 {
     margin-bottom: 0.5rem;
 }
 
-/* Descripción */
 .tarjeta-bicicleta > p:not(.precio-bicicleta) {
     line-height: 1.5;
 }
 
-/* Precio */
 .precio-bicicleta {
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--color-verde-ruta)
+    color: var(--color-verde-ruta);
 }
 
-/* Unidad del precio */
 .precio-bicicleta span {
     font-size: 0.9rem;
     font-weight: normal;
-    color: var(--color-gris-asfalto)
+    color: var(--color-gris-asfalto);
 }
 
-/* Enlace de reserva al final de cada tarjeta */
 .tarjeta-bicicleta .boton-reservar {
     display: block;
     margin-top: auto;
@@ -632,18 +575,20 @@ footer a {
     color: #FFFFFF;
 }
 
-/* Estados de interacción */
 .tarjeta-bicicleta .boton-reservar:hover {
     background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
     outline: 1px solid var(--color-azul-noche);
     outline-offset: 1px;
 }
 
 .tarjeta-bicicleta .boton-reservar:focus {
     background-color: var(--color-naranja-pedal);
+    color: var(--color-azul-noche);
     outline: 2px solid var(--color-azul-noche);
     outline-offset: 2px;
 }
+
 
 /* =========================================
 12. PORTADA DE INICIO CON GRID
@@ -663,12 +608,6 @@ footer a {
     justify-content: center;
 }
 
-.imagen-portada {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
-}
 
 /* =========================================
 13. GALERÍA DE RUTAS CON GRID
@@ -676,7 +615,7 @@ footer a {
 
 .galeria-rutas {
     display: grid;
-    grid-template-columns: repeat(3 minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -705,6 +644,7 @@ footer a {
     margin-top: 0;
 }
 
+
 /* =========================================
 14. DISTRIBUCIÓN DE LA PÁGINA DE RESERVAS
    ========================================= */
@@ -725,7 +665,7 @@ footer a {
     min-width: 0;
     padding: 1.5rem;
     background-color: #FFFFFF;
-    border: 1px solid va(--color-gris-asfalto);
+    border: 1px solid var(--color-gris-asfalto);
     border-radius: 0.75rem;
 }
 
@@ -733,6 +673,7 @@ footer a {
 .reserva-contacto h3 {
     margin-top: 0;
 }
+
 
 /* =========================================
 15. FILA DE CAMPOS DEL FORMULARIO CON FLEXBOX
@@ -751,22 +692,16 @@ footer a {
 
 .fila-campos input {
     width: 100%;
-    box-sizing: border-box;
 }
+
 
 /* =========================================
 16. ADAPTACIÓN A PANTALLAS PEQUEÑAS
    ========================================= */
 
 @media (max-width: 700px) {
-    .portada-inicio {
-        grid-template-columns: 1fr;
-    }
-
-    .galeria-rutas {
-        grid-template-columns: 1fr;
-    }
-
+    .portada-inicio,
+    .galeria-rutas,
     .reserva-layout {
         grid-template-columns: 1fr;
     }
