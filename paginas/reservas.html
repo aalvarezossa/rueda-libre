@@ -38,128 +38,154 @@
     </header>
 
     <main>
-        <!-- Enlace de correo de contacto-->
-        <a href="mailto:info@ruedalibre.com"  class="boton-reservar">
-        Contáctanos
-        </a>
 
         <br><br>
 
-        <section>
-        <!-- Lista de definiciones con horarios de atención -->
-        <h2>Horarios de atención</h2>
-        <aside class="destacado">
-            <dl>
-                <dt><strong>Lunes - Viernes</strong></dt>
-                    <dd>7:00 a.m. a 7:00 p.m.</dd>
-                <br><br>
+        <div class="reserva-layout">
 
-                <dt><strong>Sábados, domingos y festivos</strong></dt>
-                    <dd>6:00 a.m. a 2:00 p.m.</dd>
-            </dl>
-        </aside>
+            <section class="reserva-formulario">
 
-        <br><br>
+                <!--Formulario de reserva-->
+                <h2>Formulario de Reserva</h2>
 
-        </section>
+                <form action="php" method="post">
+                    
+                    <fieldset class="grupo formulario">
+                        <legend>Tus datos</legend>
 
-        <!--Formulario de reserva-->
-        <h2>Formulario de Reserva</h2>
+                        <label for="nombre">Nombre completo:</label><br>
+                        <input type="text" id="nombre" name="nombre" required minlength="3">
+                        <br><br>
 
-        <form action="#" method="post">
-            
-            <fieldset class="grupo formulario">
-                <legend>Tus datos</legend>
+                        <div class="fila-campos">
 
-                <label for="nombre">Nombre completo:</label><br>
-                <input type="text" id="nombre" name="nombre" required minlength="3">
-                <br><br>
+                            <div class="campo">
 
-                <label for="documento">Número de documento:</label><br>
-                <input type="text" id="documento" name="documento" required
-                    title="El documento debe tener entre 6 y 10 números" inputmode="numeric"
-                    pattern="[0-9]{6,10}" maxlength="10">
-                <br><br>
+                                <label for="documento">Número de documento:</label><br>
+                                <input type="text" id="documento" name="documento" required
+                                    title="El documento debe tener entre 6 y 10 números" inputmode="numeric"
+                                    pattern="[0-9]{6,10}" maxlength="10">
+                                <br><br>
+                            
+                            </div>
 
-                <label for="email">Correo electrónico:</label><br>
-                <input type="email" id="email" name="email" required>
-                <br><br>
+                            <div class="campo">
 
-                <label for="celular">Celular:</label><br>
-                <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}"
-                title="Debe tener 10 números y empezar por 3" inputmode="numeric" maxlength="10" >
-                <br><br>
-            </fieldset>
+                                <label for="celular">Celular:</label><br>
+                                <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}"
+                                title="Debe tener 10 números y empezar por 3" inputmode="numeric" maxlength="10" >
+                                <br><br>
+                            
+                            </div>
 
-            <fieldset class="grupo formulario">
-                <legend>Tu alquiler</legend>
+                        </div>
 
-                <label for="fecha_alquiler">Fecha de alquiler:</label><br>
-                <input type="datetime-local" id="fecha_alquiler" name="fecha_alquiler" required
-                    min="2026-11-01T00:00" max="2026-12-31T23:59">
-                <br><br>
+                        <label for="email">Correo electrónico:</label><br>
+                        <input type="email" id="email" name="email" required>
+                        <br><br>
 
-                <!--Lista desplegable para tipo de bicicleta-->
-                <label for="tipo_bici">Tipo de bicicleta:</label><br>
-                <select id="tipo_bici" name="tipo_bici" required>
-                    <option value="" disabled selected>Elige una opción...</option>
-                    <option value="urbana">Urbana</option>
-                    <option value="montaña">Montaña</option>
-                    <option value="electrica">Eléctrica</option>
-                </select>
-                <br><br>
+                    </fieldset>
 
-                <!--Lista desplegable para tipo de plan-->
-                <label for="tipo_plan">Tipo de plan:</label><br>
-                <select id="tipo_plan" name="tipo_plan" required>
-                    <option value="" disabled selected>Elige una opción...</option>
-                    <option value="1_hora">1 hora</option>
-                    <option value="medio_dia">Medio día</option>
-                    <option value="dia_completo">Día completo</option>
-                </select>
-                <br><br>
+                    <fieldset class="grupo formulario">
+                        <legend>Tu alquiler</legend>
 
-                <input type="number" id="cantidad_bicicletas" name="cantidad_bicicletas" min="1" max="6"
-                    step="1" value="1" required>
-                <br><br>
+                        <label for="fecha_alquiler">Fecha de alquiler:</label><br>
+                        <input type="datetime-local" id="fecha_alquiler" name="fecha_alquiler" required
+                            min="2026-11-01T00:00" max="2026-12-31T23:59">
+                        <br><br>
 
-                <!--Lista desplegable para recorrido guiado-->
-                <label for="recorrido_guiado">¿Recorrido guiado?:</label><br>
-                <select id="recorrido_guiado" name="recorrido_guiado" required>
-                    <option value="" disabled selected>Elige una opción...</option>
-                    <option value="no_recorrido">No, gracias</option>
-                    <option value="rios_parques">Ríos y parques</option>
-                    <option value="sabores_barrio">Sabores de barrio</option>
-                    <option value="palmas">Reto Las Palmas</option>
-                </select>
-                <br><br>
-        
-                <label for="comentarios">Comentarios adicionales (opcional):</label><br>
-                <textarea id="comentarios"
-                    name="comentarios"
-                    rows="4"
-                    maxlength="300"
-                    placeholder="Escribe aquí tus comentarios"></textarea>
+                        <!--Lista desplegable para tipo de bicicleta-->
+                        <label for="tipo_bici">Tipo de bicicleta:</label><br>
+                        <select id="tipo_bici" name="tipo_bici" required>
+                            <option value="" disabled selected>Elige una opción...</option>
+                            <option value="urbana">Urbana</option>
+                            <option value="montaña">Montaña</option>
+                            <option value="electrica">Eléctrica</option>
+                        </select>
+                        <br><br>
 
-            </fieldset>
+                        <!--Lista desplegable para tipo de plan-->
+                        <label for="tipo_plan">Tipo de plan:</label><br>
+                        <select id="tipo_plan" name="tipo_plan" required>
+                            <option value="" disabled selected>Elige una opción...</option>
+                            <option value="1_hora">1 hora</option>
+                            <option value="medio_dia">Medio día</option>
+                            <option value="dia_completo">Día completo</option>
+                        </select>
+                        <br><br>
 
-            <fieldset class="grupo formulario">
+                        <input type="number" id="cantidad_bicicletas" name="cantidad_bicicletas" min="1" max="6"
+                            step="1" value="1" required>
+                        <br><br>
 
-                <legend>Confirmación</legend>
-            
-                <!--Casilla para aceptación de las políticas de alquiler-->
-                <input type="checkbox" id="aceptacion_politicas" name="aceptacion_politicas" value="si" required>
-                <label for="aceptacion_politicas">
-                    Acepto las políticas de alquiler.
-                </label>
-                <br><br>
+                        <!--Lista desplegable para recorrido guiado-->
+                        <label for="recorrido_guiado">¿Recorrido guiado?:</label><br>
+                        <select id="recorrido_guiado" name="recorrido_guiado" required>
+                            <option value="" disabled selected>Elige una opción...</option>
+                            <option value="no_recorrido">No, gracias</option>
+                            <option value="rios_parques">Ríos y parques</option>
+                            <option value="sabores_barrio">Sabores de barrio</option>
+                            <option value="palmas">Reto Las Palmas</option>
+                        </select>
+                        <br><br>
                 
-                <!--Botón para enviar formulario-->
-                <button type="submit">Enviar</button><br>
-        
-            </fieldset>
+                        <label for="comentarios">Comentarios adicionales (opcional):</label><br>
+                        <textarea id="comentarios"
+                            name="comentarios"
+                            rows="4"
+                            maxlength="300"
+                            placeholder="Escribe aquí tus comentarios"></textarea>
 
-        </form>
+                    </fieldset>
+
+                    <fieldset class="grupo formulario">
+
+                        <legend>Confirmación</legend>
+                    
+                        <!--Casilla para aceptación de las políticas de alquiler-->
+                        <input type="checkbox" id="aceptacion_politicas" name="aceptacion_politicas" value="si" required>
+                        <label for="aceptacion_politicas">
+                            Acepto las políticas de alquiler.
+                        </label>
+                        <br><br>
+                        
+                        <!--Botón para enviar formulario-->
+                        <button type="submit">Enviar</button><br>
+                
+                    </fieldset>
+
+                </form>
+
+            </section>
+
+            <aside class="reserva-contacto">
+
+                <h2>Información de contacto</h2>
+
+                <p>¿Tienes preguntas sobre los alquileres o recorridos?
+                    Estamos aquí para ayudarte.
+                </p>
+
+                <p>
+                    <strong>Correo:</strong>
+                    <a href="mailto:info@ruedalibre.com">
+                        info@ruedalibre.com
+                    </a>
+                </p>
+
+                <!-- Horarios de atención -->
+                <h3>Horarios de atención</h3>
+                <p>Lunes a Viernes: 7:00 a.m. a 7:00 p.m.</p>
+                <p>Sábados, domingos y festivos: 6:00 a.m. a 2:00 p.m.</p>
+                        
+                <!-- Enlace de correo de contacto-->
+                <a href="mailto:info@ruedalibre.com"  class="boton-reservar">
+                Contáctanos
+                </a>
+
+            </aside>
+
+        </div>
 
         <br><br>
 

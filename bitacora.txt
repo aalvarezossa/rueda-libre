@@ -186,3 +186,10 @@ Pruebas en DevTools:
 - A 900 px: 3 columnas.
 - A 500 px: 1 columna.
 
+#Distribución del sitio con Grid.
+Portada de inicio - Nuestras Rutas - Página de reservas
+Se utilizó CSS Grid en estos apartados
+
+#Distribución del sitio con Flexbox.
+Fila del formulario - Encabezado - Pie de página
+Se utilizó flexbox en estos apartados, ya que solo se requería tener la información en una misma fila.

@@ -46,31 +46,38 @@
 
     <main>
 
-        <!--Primer párrafo con enlaces para llevar hasta la sección de encuéntranos-->
-        
+        <section class="portada-inicio">
+            <div class="texto-portada">
+                <h2>Descubre Medellín sobre dos ruedas.</h2>
+                <p>
+                    Alquila tu bicicleta ideal y disfruta de la ciudad, sus ciclorutas y sus paisajes
+                    con Rueda Libre.
+                </p>
+                <!--Enlace para reservar ahora-->
+                <a href="paginas/reservas.html" class="boton-reservar">
+                    Reservar tu bicicleta
+                </a>
+            </div>
 
-        <br>
-
-        <!--Enlace para reservar ahora-->
-        <a href="paginas/reservas.html" class="boton-reservar">Reservar ahora</a>
-
-        <section class="portada">
-            <!--Imagen de portada-->
-            <img src="img/portada.png" alt="Portada de Rueda Libre" class="imagen-portada">
+            <div class="imagen-portada">
+                <!--Imagen de portada-->
+                <img src="img/portada.png" alt="Portada de Rueda Libre" class="imagen-portada">
+            </div>
         </section>
-        
-        <!--Secciones-->
+            
         <section>
             <h2>¿Quiénes somos?</h2>
-                <p>Somos un equipo apasionado por la <strong>movilidad sostenible</strong> y el turismo urbano. Nuestra misión es promover el uso de la bicicleta como medio de transporte y recreación en Medellín.</p>
+                <p>Somos un equipo apasionado por la <strong>movilidad sostenible</strong> y el turismo urbano. 
+                    Nuestra misión es promover el uso de la bicicleta como medio de transporte y recreación en Medellín.</p>
         </section>
 
         <!-- Imagen de bicicleta -->
-        <scetion class="portada">
+        <section class="portada">
             <img src="img/bicicleta.jpg"
                 alt="Bicicletas disponibles para alquiler"
                 class="imagen-portada">
-        </scetion>
+        </section>
+
 
         <section id="servicios">
 
@@ -128,6 +135,33 @@
                     <li>Realiza el pago de manera segura.</li>
                     <li>Recoge tu bicicleta en nuestras instalaciones.</li>
                 </ol> 
+        </section>
+
+        <!-- Nuestras rutas -->
+        <section id="nuestras-rutas">
+            <h2>Nuestras rutas</h2>
+            <p>Elige una experiencia y descubre Medellín a tu ritmo</p>
+
+            <div class="galeria-rutas">
+                <article class="tarjeta-ruta">
+                    <img src="img/ruta-rio-y-parque.jfif" alt="Ruta por el río y los parques">
+                    <h3>Río y Parques</h3>
+                    <p>Nivel: Fácil</p>
+                </article>
+
+                <article class="tarjeta-ruta">
+                    <img src="img/ruta-barrio.jfif" alt="Recorrido por los sabores de barrio">
+                    <h3>Sabores de Barrio</h3>
+                    <p>Nivel: Intermedio</p>
+                </article>
+
+                <article class="tarjeta-ruta">
+                    <img src="img/ruta-palmas.jfif" alt="Ruta de montaña por Las Palmas">
+                    <h3>Reto Las Palmas</h3>
+                    <p>Nivel: Difícil</p>
+                </article>
+            </div>
+
         </section>
 
         <!--Nueva flota-->
@@ -235,6 +269,10 @@
     </main>
 
     <br>
+
+    <form>
+        <label for="correo">Correo</label>
+    </form>
 
     <!--Pie de página-->
     <footer>
